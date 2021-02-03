@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/***************
+  MOBILE FIRST 
+****************/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container
+{
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+}
+
+/**********
+    SVG 
+***********/
+
+.svg-1
+{
+   position: absolute;
+   top: -38px;
+   left: 195px;
+   z-index: -1;
+}
+
+.svg-2
+{
+    display: none;
+}
+
+
+/**********
+  GENERAL 
+***********/
+
+h2, p
+{
+    color: hsl(233, 13%, 49%);
+    font-size: 15px;
+}
+
+h1 
+{
+    margin-bottom: 45px;
+    padding-top: 75px;
+    text-align: center;
+}
+
+
+/*********
+  SLIDER 
+**********/
+
+.annually_monthly
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.annually_monthly p
+{
+    margin: 0 20px;
+    color: hsl(234, 14%, 74%);
+}
+
+.switch
+{
+    width: 60px;
+    height: 35px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.switch .slider-monthly
+{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    position: relative;
+    left: 25px;
+    transition: 0.5s;
+}
+
+.switch .slider-annually
+{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+
+.switch .slider-monthly:hover,
+.switch .slider-annually:hover
+{
+  cursor: pointer;
+}
+
+/*********
+   CARD 
+**********/
+
+section .subscription .card
+{
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 0 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+section .subscription .card h2
+{
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+section .subscription .card .price
+{
+    font-size: 50px;
+    color: hsl(232, 13%, 33%);
+    padding-bottom: 35px;
+    display: block;
+    border-bottom: 1px solid hsl(227, 13%, 86%);
+}
+
+section .subscription .card p
+{
+    padding: 15px 0;
+    border-bottom: 1px solid hsl(227, 13%, 86%);
+}
+
+section .subscription .card a
+{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+/* CARD PROFESSIONAL */
+
+section .subscription .card-pro
+{
+    background: linear-gradient(to bottom, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+}
+
+section .subscription .card-pro h2,
+section .subscription .card-pro .price,
+section .subscription .card-pro p
+{
+    color: #fff;
+}
+
+section .subscription .card-pro a
+{
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+}
+
+
+/* FOOTER */
+footer
+{
+    text-align: center;
+    margin-top: 150px;
+}
+
+/**************
+ MEDIA QUERIES
+***************/
+
+@media screen and (min-width: 540px) {
+    section .subscription .card
+    {
+        width: 500px;
+        margin: 0 auto 30px;
+    }
+    .svg-1 {
+        left: auto;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{ height: 100vh;}
+    .container
+    {
+        padding: 0;
+    }
+
+    /* SVG */
+    .svg-2
+    {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* CARD */
+    section .subscription
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section .subscription .card
+    {
+        width: 325px;
+        margin: 0;
+    }
+    section .subscription .card-pro
+    {
+        height: 490px;
+        padding-top: 20px;
+    }
+}
